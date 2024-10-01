@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="esp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Adivina el número secreto</title>
+</head>
+
+<body>
+
+    <!-- Contenedor principal del juego -->
+    <div class="container">
+        <div class="container__contenido">
+            <div class="container__informaciones">
+                <div class="container__texto">
+                    <h1></h1> <!-- Título que se actualizará dinámicamente con JavaScript -->
+                    <p class="texto__parrafo"></p> <!-- Párrafo que mostrará mensajes, como instrucciones o resultados -->
+                </div>
+                <!-- Campo de entrada para que el usuario ingrese un número -->
+                <input type="number" id="valorUsuario" min="1" max="10" class="container__input">
+                <div class="chute container__botones">
+                    <!-- Botón para intentar adivinar el número -->
+                    <button onclick="verificarIntento();" class="container__boton">Intentar</button>
+                    <!-- Botón para reiniciar el juego, inicialmente deshabilitado -->
+                    <button onclick="reiniciarJuego();" class="container__boton" id="reiniciar" disabled>Nuevo juego</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para el popup que muestra una imagen al adivinar correctamente -->
+    <div id="popup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <!-- Botón para cerrar el popup -->
+            <span class="close" onclick="cerrarPopup()">&times;</span>
+            <!-- Imagen que se mostrará cuando el usuario acierte -->
+            <img src="img/acces granted.jpg" alt="Acierto!" />
+        </div>
+    </div>
+
+    <!-- Vincula el archivo JavaScript que contiene la lógica del juego -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>

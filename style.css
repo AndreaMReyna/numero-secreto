@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+    margin: 0; /* Elimina el margen por defecto de todos los elementos */
+    padding: 0; /* Elimina el padding por defecto de todos los elementos */
+    color: white; /* Establece el color del texto a blanco para todos los elementos */
+}
+
+body {
+    background-image: url(img/imagen\ de\ fondo.jpg); /* Establece una imagen de fondo para la página */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    height: 100vh; /* Establece la altura del body a 100% de la altura de la ventana */
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+.container {
+    width: 1200px; /* Ancho fijo del contenedor principal */
+    height: 600px; /* Altura fija del contenedor principal */
+    display: flex; /* Utiliza flexbox para alinear elementos dentro del contenedor */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    justify-content: space-between; /* Espacia los elementos a los extremos del contenedor */
+    border-radius: 24px; /* Bordes redondeados */
+    border: 1px solid #04ff00; /* Borde verde */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Sombra del contenedor */
+    background-size: 100% 100%; /* Ajusta la imagen de fondo al tamaño del contenedor */
+    position: relative; /* Posicionamiento relativo para el contenedor */
+}
+
+.container__contenido {
+    display: flex; /* Utiliza flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    position: absolute; /* Posiciona el contenido de forma absoluta */
+    bottom: 0; /* Coloca el contenido en la parte inferior del contenedor */
+}
+
+.container__informaciones {
+    flex: 1; /* Permite que este elemento crezca para llenar el espacio disponible */
+    padding: 3rem; /* Espaciado interno del contenedor de información */
+}
+
+.container__boton {
+    border-radius: 16px; /* Bordes redondeados para los botones */
+    background: #068904; /* Color de fondo verde para los botones */
+    padding: 16px 24px; /* Espaciado interno del botón */
+    width: 100%; /* Ancho completo del botón */
+    font-size: 24px; /* Tamaño de fuente del texto en el botón */
+    font-weight: 700; /* Peso de la fuente en negrita */
+    border: none; /* Sin borde para el botón */
+    margin-top: 2rem; /* Margen superior para separar botones */
+}
+
+.container__boton:disabled {
+    background: #898989; /* Color de fondo gris para botones deshabilitados */
+}
+
+.container__texto {
+    margin: 16px 0; /* Margen vertical para el texto dentro del contenedor */
+}
+
+.container__texto-azul {
+    color: #000000; /* Color del texto azul (en este caso, negro) */
+}
+
+.container__input {
+    width: 100%; /* Ancho completo del campo de entrada */
+    height: 72px; /* Altura fija del campo de entrada */
+    border-radius: 16px; /* Bordes redondeados para el campo de entrada */
+    background-color: #FFF; /* Fondo blanco para el campo de entrada */
+    border: none; /* Sin borde para el campo de entrada */
+    color: #000000; /* Color del texto negro */
+    padding: 2rem; /* Espaciado interno del campo de entrada */
+    font-size: 24px; /* Tamaño de fuente del texto en el campo de entrada */
+    font-weight: 700; /* Peso de la fuente en negrita */
+    font-family: 'Inter', sans-serif; /* Fuente personalizada para el campo de entrada */
+}
+
+.container__botones {
+    display: flex; /* Utiliza flexbox para organizar los botones */
+    gap: 2em; /* Espacio entre los botones */
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif; /* Fuente personalizada para el título */
+    font-size: 72px; /* Tamaño de fuente grande para el título */
+    padding-bottom: 3rem; /* Espacio inferior del título */
+}
+
+p,
+button {
+    font-family: 'Inter', sans-serif; /* Fuente personalizada para párrafos y botones */
+}
+
+.texto__parrafo {
+    font-size: 32px; /* Tamaño de fuente del párrafo */
+    font-weight: 400; /* Peso de la fuente normal */
+}
+
+.popup {
+    position: fixed; /* Posiciona el popup de forma fija en la pantalla */
+    left: 0; /* Posición desde la izquierda */
+    top: 0; /* Posición desde la parte superior */
+    width: 100%; /* Ancho completo de la pantalla */
+    height: 100%; /* Altura completa de la pantalla */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad para el overlay */
+    display: flex; /* Utiliza flexbox para centrar el contenido del popup */
+    align-items: center; /* Centra verticalmente el contenido del popup */
+    justify-content: center; /* Centra horizontalmente el contenido del popup */
+    z-index: 1000; /* Asegura que el popup esté encima de otros elementos */
+}
+
+.popup-content {
+    position: relative; /* Posicionamiento relativo para el contenido del popup */
+    background-color: black; /* Fondo negro para el contenido del popup */
+    border-radius: 8px; /* Bordes redondeados para el contenido del popup */
+    padding: 0; /* Sin padding para ajustarse al tamaño de la imagen */
+    text-align: center; /* Centra el texto dentro del popup */
+    display: inline-block; /* Permite que el contenido se ajuste al tamaño de la imagen */
+}
+
+.popup-content img {
+    max-width: 60%; /* Ancho máximo de la imagen en el popup */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.close {
+    position: absolute; /* Posiciona el botón de cerrar de forma absoluta dentro del popup */
+    top: 10px; /* Posición desde la parte superior */
+    right: 15px; /* Posición desde la derecha */
+    font-size: 24px; /* Tamaño de fuente del botón de cerrar */
+    cursor: pointer; /* Cambia el cursor a puntero al pasar sobre el botón */
+}
